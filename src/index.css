@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-background: #FFFFFF;
+  --color-secondaryBg: #F8FAFC;
+  --color-altBg: #F1F5F9;
+  --color-textPrimary: #0F172A;
+  --color-textSecondary: #64748B;
+  --color-textMuted: #94A3B8;
+  --color-primary: #2563EB;
+  --color-primaryHover: #1D4ED8;
+  --color-primaryLight: #EFF6FF;
+  --color-accent: #0891B2;
+  --color-borderLight: #E2E8F0;
+  --color-footerBg: #0F172A;
+  --color-success: #16A34A;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-textPrimary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-textPrimary);
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
+  }
+  
+  .container-custom {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    max-width: 80rem;
+  }
+}
